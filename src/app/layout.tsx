@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,8 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-3xl mx-auto my-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-3xl mx-auto my-4 px-4`}
       >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           <div>{children}</div>
           <footer className="absolute bottom-0 pt-6 pb-4 text-center text-sm text-gray-300">
@@ -38,12 +45,13 @@ export default function RootLayout({
               href="https://instagram.com/sbek22"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-primary hover:underline text-blue-400"
+              className="font-bold hover:underline text-blue-400"
             >
               Bek Slambek
             </a>
           </footer>
-          <Analytics />
+        </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
