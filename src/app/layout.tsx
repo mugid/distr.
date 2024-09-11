@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 
@@ -30,12 +29,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-3xl mx-auto my-4`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
           <Navbar />
           <div>{children}</div>
           <footer className="absolute bottom-0 pt-6 pb-4 text-center text-sm text-gray-300">
@@ -44,12 +37,11 @@ export default function RootLayout({
               href="https://instagram.com/sbek22"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-primary hover:underline text-blue-400 font-bold"
+              className="font-bold text-primary hover:underline text-blue-400"
             >
               Bek Slambek
             </a>
           </footer>
-        </ThemeProvider>
       </body>
     </html>
   );
