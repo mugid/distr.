@@ -40,7 +40,7 @@ export default function RootLayout({
           <Navbar />
           <div>{children}</div>
           <footer className="absolute bottom-0 pt-6 pb-4 text-center text-sm text-gray-300">
-            Created by{" "}
+            Problem solved by{" "}
             <a
               href="https://instagram.com/sbek22"
               target="_blank"
