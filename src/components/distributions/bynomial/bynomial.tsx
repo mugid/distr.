@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/table";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
+import { factorial } from "@/components/functions/factorial";
 
 export default function BynomialDistribution() {
   const [numTrials, setNumTrials] = useState("");
@@ -23,12 +24,6 @@ export default function BynomialDistribution() {
   const [stdDev, setStdDev] = useState(0);
   const [tableData, setTableData] = useState<number[][]>([]);
   const [trialsErrorMessage, setTrialsErrorMessage] = useState("");
-
-  function factorial(num: number): number {
-    let rval = 1;
-    for (let i = 2; i <= num; i++) rval = rval * i;
-    return rval;
-  }
 
   const generateTable = (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,7 +86,7 @@ export default function BynomialDistribution() {
             value={probability}
             onChange={(e) => setProbability(e.target.value)}
             placeholder="Enter probability (0-1)"
-            step="0.01"
+            step="0.0001"
             min="0"
             max="1"
             required
