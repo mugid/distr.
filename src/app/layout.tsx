@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -17,8 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "distr.",
-  description:
-    "Save time spent on calculations required to build the table, problify will count everything for you.",
+  description: "Build distribution tables and graphs with distr.",
 };
 
 export default function RootLayout({
@@ -30,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main
-          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-3xl mx-auto my-4 px-4`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased my-4`}
         >
           <ThemeProvider
             attribute="class"
@@ -38,7 +36,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
             <div>{children}</div>
             <footer className="mt-8 pb-4 text-center text-sm text-gray-300">
               Problem solved by{" "}
