@@ -2,6 +2,7 @@
 
 import BynomialDistribution from "@/components/distributions/bynomial/bynomial";
 import PoissonDistribution from "@/components/distributions/poisson/poisson";
+import NormalDistribution from "@/components/distributions/normal/normal";
 import { useState } from "react";
 import {
   Select,
@@ -29,14 +30,16 @@ export default function Home() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="bynomial">Bynomial Distribution</SelectItem>
-          <SelectItem value="poisson">Poisson</SelectItem>
+          <SelectItem value="poisson">Poisson Distribution</SelectItem>
+          <SelectItem value="poisson">Normal Distribution</SelectItem>
         </SelectContent>
       </Select>
       <div className="mt-4">
         {selected === "bynomial" && <BynomialDistribution />}
         {selected === "poisson" && <PoissonDistribution />}
+        {selected === "normal" && <NormalDistribution />}
       </div>
-    </div>
+    </div>  
     </div>
   );
 }
