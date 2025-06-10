@@ -9,7 +9,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { AlertCircle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Area, AreaChart, CartesianGrid, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
+import { Area, AreaChart, CartesianGrid, ReferenceLine, ResponsiveContainer, XAxis, YAxis } from "recharts"
 
 export default function NormalDistribution() {
   const [variant, setVariant] = useState("")
@@ -157,21 +157,18 @@ export default function NormalDistribution() {
               <h3 className="text-lg font-medium">Normal Distribution Graph</h3>
               {probability !== null && (
                 <p className="text-sm text-muted-foreground">
-                  Probability P({comparison} {variant}) = {(probability * 100).toFixed(4)}%
+                  Probability P(X {comparison} {variant}) = {(probability * 100).toFixed(4)}%
                 </p>
               )}
             </div>
             <ResponsiveContainer width="100%" height={400}>
               <AreaChart data={normalDistributionData} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="x" label={{ value: "Standard Deviations (σ)", position: "insideBottom", offset: -5 }} />
-                <YAxis label={{ value: "Probability Density", angle: -90, position: "insideLeft" }} />
-                <Tooltip formatter={(value: number) => value.toFixed(4)} />
+                <CartesianGrid vertical={false} />
+                <XAxis dataKey="x" />
+                <YAxis />
 
-                {/* Normal distribution curve */}
-                <Area type="monotone" dataKey="y" stroke="#8884d8" fill="#8884d8" fillOpacity={0.3} />
+                <Area type="monotone" dataKey="y" stroke="#4a90e2" />
 
-                {/* Shaded area based on comparison */}
                 {comparison && variant && mean && stdDev && (
                   <Area
                     type="monotone"
@@ -188,8 +185,8 @@ export default function NormalDistribution() {
                       }
                       return 0
                     }}
-                    stroke="#82ca9d"
-                    fill="#82ca9d"
+                    stroke="#4a90e2"
+                    fill="#4a90e2"
                     fillOpacity={0.8}
                   />
                 )}
@@ -198,7 +195,7 @@ export default function NormalDistribution() {
                 {variant && mean && stdDev && (
                   <ReferenceLine
                     x={calculateZScore(Number.parseFloat(variant), Number.parseFloat(mean), Number.parseFloat(stdDev))}
-                    stroke="red"
+                    stroke="#4a90e2"
                     label={{
                       value: `Z = ${calculateZScore(Number.parseFloat(variant), Number.parseFloat(mean), Number.parseFloat(stdDev)).toFixed(2)}`,
                       position: "top",
