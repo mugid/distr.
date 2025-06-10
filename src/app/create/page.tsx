@@ -31,7 +31,7 @@ export default function Home() {
         <SelectContent>
           <SelectItem value="bynomial">Bynomial Distribution</SelectItem>
           <SelectItem value="poisson">Poisson Distribution</SelectItem>
-          <SelectItem value="poisson">Normal Distribution</SelectItem>
+          <SelectItem value="normal">Normal Distribution</SelectItem>
         </SelectContent>
       </Select>
       <div className="mt-4">
