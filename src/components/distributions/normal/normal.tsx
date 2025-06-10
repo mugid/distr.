@@ -77,7 +77,7 @@ export default function NormalDistribution() {
     }
 
     if (!comparison) {
-      setErrorMessage("Please select a comparison operator (< or >).")
+      setErrorMessage("Please select a comparison operator.")
       setShowGraph(false)
       return
     }
