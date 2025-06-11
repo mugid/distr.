@@ -13,7 +13,7 @@ export default function LandingPage() {
         <HeroSection />
       </section>
       <section id="features" className="py-20">
-        <FeaturesSection
+        <FeaturesSection />
       </section>
     </div>
   );
