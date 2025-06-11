@@ -17,7 +17,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-1 gap-12">
             <motion.div
               className="bg-card p-8 rounded-lg shadow-lg"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <h3 className="text-2xl font-semibold mb-4">Binomial Tables</h3>
