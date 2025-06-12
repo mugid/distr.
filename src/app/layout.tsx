@@ -38,14 +38,14 @@ export default function RootLayout({
           >
             <div>{children}</div>
             <footer className="mt-8 pb-4 text-center text-sm text-gray-300">
-              Problem solved by{" "}
+              problem solved by{" "}
               <a
                 href="https://instagram.com/sbek22"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold hover:underline text-blue-400"
+                className="italic font-bold hover:underline text-blue-400"
               >
-                Bek Slambek
+                bek slambek
               </a>
             </footer>
           </ThemeProvider>
