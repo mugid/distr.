@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 
 export default function FeaturesSection () {
     return (
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">Features</h2>
-          <div className="grid md:grid-cols-1 gap-12">
+        <section className="pt-12">
+          <h2 className="text-4xl font-bold mb-12 tracking-tighter text-center">Features</h2>
+          <div className="flex flex-col gap-12">
             <motion.div
               className="bg-card p-8 rounded-lg shadow-lg"
               whileHover={{ scale: 1.03 }}
@@ -50,6 +50,6 @@ export default function FeaturesSection () {
               </div>
             </motion.div>
           </div>
-        </div>
+        </section>
     )
 }

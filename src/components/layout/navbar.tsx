@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function  Navbar() {
   return (
-    <div className="flex justify-center items-center py-8 px-10 border-b border-card">
+    <div className="flex justify-center items-center py-6 px-10 border-b border-card">
         <Link href="/">
         <Image
           src="/logo-light.svg"
