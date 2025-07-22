@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Navbar from "@/components/build/navbar";
+import Navbar from "@/components/layout/navbar";
 
 export default function Home() {
   const [selected, setSelected] = useState("");

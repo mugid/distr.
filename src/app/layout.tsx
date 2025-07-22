@@ -4,6 +4,9 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "distr.",
+  title: "distr. | distribution tables and graphs",
   description: "Build distribution tables and graphs with distr.",
 };
 
@@ -25,32 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <main
-          className={`${geistSans.variable} ${geistMono.variable} antialiased my-4`}
-        >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <div>{children}</div>
-            <footer className="mt-8 pb-4 text-center text-sm text-foreground/80">
-              problem solved by{" "}
-              <a
-                href="https://github.com/sbek22"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="italic font-bold hover:underline text-blue-400"
-              >
-                bek slambek
-              </a>
-            </footer>
+          <Navbar />
+            {children}
+            <Footer />
           </ThemeProvider>
           <Analytics />
-        </main>
       </body>
     </html>
   );
