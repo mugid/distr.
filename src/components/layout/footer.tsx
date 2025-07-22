@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://github.com/mugid"
           target="_blank"
           rel="noopener noreferrer"
-          className="italic text-primary hover:border-b-1 hover:border-primary hover:font-bold transition-all duration-300"
+          className="font-bold text-primary/80 hover:text-primary transition-all duration-300"
         >
           bek slambek
         </a>
