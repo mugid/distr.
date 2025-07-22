@@ -11,7 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Navbar from "@/components/layout/navbar";
 
 export default function Home() {
   const [selected, setSelected] = useState("");
@@ -22,7 +21,6 @@ export default function Home() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-    <Navbar />
     <div className="mt-4">
       <Select onValueChange={chooseDistribution}>
         <SelectTrigger>
