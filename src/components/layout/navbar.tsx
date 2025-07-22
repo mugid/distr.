@@ -9,15 +9,15 @@ export default function  Navbar() {
         <Image
           src="/logo-light.svg"
           alt="distr. logo light"
-          width={80}
-          height={80}
+          width={72}
+          height={72}
           className="inline-block dark:hidden"
         />
         <Image
           src="/logo-dark.svg"
           alt="distr. logo dark"
-          width={80}
-          height={80}
+          width={72}
+          height={72}
           className="dark:inline-block hidden"
         />
         </Link>
