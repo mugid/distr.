@@ -1,21 +1,20 @@
-import { ThemeToggle } from "./theme-button";
+import { ThemeButton } from "./theme-button";
 
 export default function Footer() {
   return (
-    <footer className="mt-8 pb-4 text-center text-sm text-foreground/80">
-        <p>
-
-      problem solved by{" "}
-      <a
-        href=""
-        target="_blank"
-        rel="noopener noreferrer"
-        className="italic font-bold hover:underline text-blue-400"
-      >
-        bek slambek
-      </a>
-        </p>
-      <ThemeToggle />
+    <footer className="py-12 max-w-7xl px-10 mx-auto text-foreground/80 flex justify-between items-center">
+      <p>
+        problem solved by{" "}
+        <a
+          href="https://github.com/mugid"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="italic text-primary hover:border-b-1 hover:border-primary hover:font-bold transition-all duration-300"
+        >
+          bek slambek
+        </a>
+      </p>
+      <ThemeButton />
     </footer>
   );
 }
