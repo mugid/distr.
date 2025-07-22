@@ -37,10 +37,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <div>{children}</div>
-            <footer className="mt-8 pb-4 text-center text-sm text-gray-300">
+            <footer className="mt-8 pb-4 text-center text-sm text-foreground/80">
               problem solved by{" "}
               <a
-                href="https://instagram.com/sbek22"
+                href="https://github.com/sbek22"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="italic font-bold hover:underline text-blue-400"
