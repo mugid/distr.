@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl min-h-screen mx-auto">
     <div className="mt-4">
       <Select onValueChange={chooseDistribution}>
         <SelectTrigger>
