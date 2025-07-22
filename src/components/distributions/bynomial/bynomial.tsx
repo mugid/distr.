@@ -185,13 +185,13 @@ export default function BynomialDistribution() {
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-6">
               Characteristics
             </h4>
-            <p className="leading-7 [&:not(:first-child)]:mt-4">
+            <p className="leading-7 not-first:mt-4">
               Expected value: {expValue}
             </p>
-            <p className="leading-7 [&:not(:first-child)]:mt-4">
+            <p className="leading-7 not-first:mt-4">
               Variance: {variance}
             </p>
-            <p className="leading-7 [&:not(:first-child)]:mt-4">
+            <p className="leading-7 not-first:mt-4">
               Standard deviation: {stdDev}
             </p>
           </div>

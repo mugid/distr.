@@ -68,7 +68,7 @@ export default function PoissonDistribution() {
   };
 
   return (
-    <div className="flex-grow">
+    <div className="grow">
       <form onSubmit={generateTable} className="space-y-4">
         <div>
           <Label htmlFor="numTrials">Number of Trials</Label>
