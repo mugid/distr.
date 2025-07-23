@@ -138,7 +138,7 @@ export default function NormalDistribution() {
             required
           />
         </div>
-        <Button type="submit">Generate Graph</Button>
+        <Button type="submit" className="text-white">Generate Graph</Button>
       </form>
 
       {errorMessage && (
@@ -151,7 +151,7 @@ export default function NormalDistribution() {
       )}
 
       {showGraph && (
-        <Card className="p-4">
+        <Card className="p-4 my-12">
           <CardContent className="pt-6">
             <div className="mb-4">
               <h3 className="text-lg font-medium">Normal Distribution Graph</h3>

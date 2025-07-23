@@ -94,7 +94,7 @@ export default function PoissonDistribution() {
             required
           />
         </div>
-        <Button type="submit">Generate Table</Button>
+        <Button type="submit" className="text-white">Generate Table</Button>
       </form>
 
       {errorMessage && (
@@ -105,8 +105,8 @@ export default function PoissonDistribution() {
       )}
 
       {tableData.length > 0 && (
-        <>
-          <div className="custom-scrollbar overflow-auto max-h-[60vh] border rounded-md mt-6">
+        <div className="my-12">
+          <div className="custom-scrollbar overflow-auto max-h-[60vh] border rounded-md">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -134,7 +134,7 @@ export default function PoissonDistribution() {
             </Table>
           </div>
           <div>
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-6">
+            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-12">
               Graph for Cumulative Probability
             </h4>
             <ChartContainer config={chartConfig} className="pt-8">
@@ -183,7 +183,7 @@ export default function PoissonDistribution() {
               </LineChart>
             </ChartContainer>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

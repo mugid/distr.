@@ -107,11 +107,11 @@ export default function BynomialDistribution() {
             required
           />
         </div>
-        <Button type="submit">Generate Table</Button>
+        <Button type="submit" className="text-white">Generate Table</Button>
       </form>
 
       {tableData.length > 0 && (
-        <div>
+        <div className="my-12">
           <Table>
             <TableHeader>
               <TableRow>
@@ -131,7 +131,7 @@ export default function BynomialDistribution() {
             </TableBody>
           </Table>
           <div>
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-6">
+            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-12">
               Graph for Cumulative Probability
             </h4>
             <ChartContainer config={chartConfig} className="pt-8">
@@ -149,7 +149,6 @@ export default function BynomialDistribution() {
                   top: 10,
                   bottom: 10,
                 }}
-                
               >
                 <CartesianGrid vertical={true} />
                 <YAxis
@@ -182,18 +181,25 @@ export default function BynomialDistribution() {
             </ChartContainer>
           </div>
           <div>
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-6">
+            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-12">
               Characteristics
             </h4>
-            <p className="leading-7 not-first:mt-4">
-              Expected value: {expValue}
-            </p>
-            <p className="leading-7 not-first:mt-4">
-              Variance: {variance}
-            </p>
-            <p className="leading-7 not-first:mt-4">
-              Standard deviation: {stdDev}
-            </p>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Expected value</TableHead>
+                  <TableHead>Variance</TableHead>
+                  <TableHead>Standard deviation</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>{expValue}</TableCell>
+                  <TableCell>{variance}</TableCell>
+                  <TableCell>{stdDev}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </div>
         </div>
       )}
