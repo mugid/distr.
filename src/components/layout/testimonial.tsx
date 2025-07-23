@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TestimonialSection() {
   return (
-    <section className="pt-24">
+    <section className="pb-12">
       <h2 className="text-5xl font-bold mb-12 tracking-tighter text-center">
         People Say
       </h2>
