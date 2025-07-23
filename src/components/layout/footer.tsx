@@ -1,8 +1,13 @@
+"use client"
+
 import { ThemeButton } from "./theme-button";
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+
   return (
-    <footer className="py-12 max-w-7xl px-10 mx-auto text-foreground/80 flex justify-between items-center">
+    <footer className={`py-12 ${pathname == "/" ? "max-w-7xl" : "max-w-3xl"} px-10 mx-auto text-foreground/80 flex justify-between items-center`}>
       <p>
         problem solved by{" "}
         <a
