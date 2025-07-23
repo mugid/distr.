@@ -23,7 +23,30 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "distr. | distribution tables and graphs",
   description: "Build distribution tables and graphs with distr.",
+  openGraph: {
+    title: "distr. | distribution tables and graphs",
+    description: "Build distribution tables and graphs with distr.",
+    url: 'https://distr.vercel.app',
+    siteName: 'distr. ',
+    images: [
+      {
+        url: 'https://distr.vercel.app/image.png',
+        width: 800,
+        height: 600,
+        alt: 'Hero Image',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "distr. | distribution tables and graphs",
+    description: "Build distribution tables and graphs with distr.",
+    images: ['https://distr.vercel.app/image.png'],
+  },
 };
+
 
 export default function RootLayout({
   children,
