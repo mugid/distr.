@@ -2,6 +2,7 @@
 
 import FeaturesSection from "@/components/layout/features";
 import HeroSection from "@/components/layout/hero";
+import TestimonialSection from "@/components/layout/testimonial";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { motion } from "motion/react";
 
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <HeroSection />
       <VelocityScroll className="pt-12">GRAPHS AND TABLES AND</VelocityScroll>
       <FeaturesSection />
+      <TestimonialSection />
     </motion.div>
   );
 }
